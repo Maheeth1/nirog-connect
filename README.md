@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+# 🏥 NirogGyan – Healthcare Appointment Booking App
 
-## Project info
+NirogGyan is a sleek and responsive web application built with **React + TypeScript + Tailwind CSS**. It allows users to browse doctors, view their availability, and book appointments through a clean and intuitive interface.
 
-**URL**: https://lovable.dev/projects/6904c197-a58b-49e3-b526-5032257993a9
+---
 
-## How can I edit this code?
+## 🔍 Project Overview
 
-There are several ways of editing your application.
+This application simulates a real-world healthcare booking system with the following features:
 
-**Use Lovable**
+- 🧑‍⚕️ Browse a list of doctors with specialization, profile image, and availability
+- 🔍 Search doctors by name or specialization
+- 📄 View detailed doctor profiles
+- 📅 Book appointments with date, time, and patient details
+- ✅ Form validation and confirmation flow
+- 📱 Fully responsive design for mobile, tablet, and desktop
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6904c197-a58b-49e3-b526-5032257993a9) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Live Demo
 
-**Use your preferred IDE**
+> _Coming soon..._  
+(You can deploy it on [Vercel](https://vercel.com) or [Netlify](https://netlify.com) easily.)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Tech Stack
 
-Follow these steps:
+| Technology      | Description                             |
+|-----------------|-----------------------------------------|
+| **React**       | UI Library for building user interfaces |
+| **TypeScript**  | Type safety and better developer experience |
+| **Tailwind CSS**| Utility-first CSS framework             |
+| **React Router**| Client-side routing for navigation      |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📁 Folder Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+niroggyan-app/
+├── public/ # Static files
+├── src/
+│ ├── assets/ # Images & static media
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # LandingPage, DoctorProfile, BookingPage
+│ ├── data/ # Mock JSON data for doctors
+│ ├── App.tsx # Main app routes
+│ └── main.tsx # Entry point
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+
+---
+
+## 🧪 Features
+
+### 🏠 Landing Page
+- Displays a responsive grid of doctors
+- Real-time search by name or specialization
+- Availability labels (Available Today, Fully Booked, On Leave)
+
+### 👤 Doctor Profile Page
+- Full details of selected doctor
+- Availability schedule
+- "Book Appointment" button
+
+### 📅 Booking Page
+- Form inputs: Patient Name, Email, Date & Time
+- Client-side validation
+- Confirmation message on submit
+
+---
+
+## 🔢 Sample Mock Data
+
+```json
+{
+  "id": 1,
+  "name": "Dr. Riya Sharma",
+  "specialization": "Cardiologist",
+  "profileImage": "/images/riya.jpg",
+  "availability": "Available Today",
+  "schedule": ["Monday", "Wednesday", "Friday"]
+}
 ```
 
-**Edit a file directly in GitHub**
+### ✅ How to Run Locally
+- Clone the repository
+  ```
+  git clone https://github.com/your-username/niroggyan-app.git
+  cd niroggyan-app
+  ```
+- Install dependencies
+  ```
+  npm install
+  ```
+- Start the development server
+  ```
+  npm run dev
+  ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🎯 Future Improvements (Given More Time)
+- ✅ Add calendar-based time slot picker
+- 🧑‍⚕️ Doctor dashboard to manage schedules
+- 📩 Email confirmation for appointments
+- 📦 Integrate a real backend (Express + MongoDB)
+- 🌍 Localization for multiple languages
 
-**Use GitHub Codespaces**
+### 🧠 Challenges Faced & Solutions
+| Challenge                             | Solution                                               |
+| ------------------------------------- | ------------------------------------------------------ |
+| Structuring routing with React Router | Used `react-router-dom@6` with dynamic paths           |
+| Form validation                       | Built custom validation with HTML5 + Tailwind feedback |
+| Mocking realistic doctor data         | Used JSON + realistic avatars from `randomuser.me`     |
+| Responsive design                     | Tailwind breakpoints + Flex/Grid layouts               |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 🙌 Acknowledgements
+- Thanks to the NirogGyan team for this assignment and the opportunity to demonstrate frontend skills.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6904c197-a58b-49e3-b526-5032257993a9) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+📄 License
+- This project is open-source and free to use for educational purposes.
