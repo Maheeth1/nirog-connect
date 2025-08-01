@@ -71,8 +71,8 @@ This application simulates a real-world healthcare booking system with the follo
 ### ✅ How to Run Locally
 - Clone the repository
   ```
-  git clone https://github.com/your-username/niroggyan-app.git
-  cd niroggyan-app
+  git clone https://github.com/Maheeth1/nirog-connect
+  cd nirog-connect
   ```
 - Install dependencies
   ```
