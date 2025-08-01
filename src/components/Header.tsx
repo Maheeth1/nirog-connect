@@ -24,7 +24,7 @@ export const Header = () => {
               </Button>
             )}
             <div className="flex items-center gap-2">
-              <Heart className="w-8 h-8" />
+              <img src="/favicon.ico" alt="logo" className="w-8 h-8" />
               <h1 className="text-2xl font-bold">NirogGyan</h1>
             </div>
           </div>

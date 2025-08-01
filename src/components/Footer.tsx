@@ -8,7 +8,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Heart className="w-6 h-6 text-healthcare-primary" />
+              <img src="/favicon.ico" alt="logo" className="w-6 h-6 text-healthcare-primary" />
               <h3 className="text-xl font-bold">NirogGyan</h3>
             </div>
             <p className="text-gray-300 text-sm">
@@ -44,7 +44,7 @@ export const Footer = () => {
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+91 98765 43210</span>
+                <span>+91 12345678790</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
@@ -52,14 +52,14 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>Mumbai, Maharashtra</span>
+                <span>Hyderabad, Telangana</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
-          <p>&copy; 2024 NirogGyan. All rights reserved. Built with ❤️ for better healthcare.</p>
+          <p>&copy; 2024 NirogGyan. All rights reserved.</p>
         </div>
       </div>
     </footer>
