@@ -29,14 +29,22 @@ export const DoctorCard = ({ doctor }: DoctorCardProps) => {
     navigate(`/doctor/${doctor.id}`);
   };
 
+  const handleQuickBook = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (doctor.availability !== "On Leave") {
+      navigate(`/book/${doctor.id}`);
+    }
+  };
+
   return (
-    <Card className="group hover:scale-105 transition-all duration-300 bg-healthcare-card border-border/20">
+    <Card className="group hover:scale-[1.02] hover:shadow-xl transition-all duration-300 bg-healthcare-card border-border/20 hover:border-healthcare-primary/30 cursor-pointer" 
+          onClick={handleViewProfile}>
       <CardHeader className="text-center space-y-4">
         <div className="relative mx-auto">
           <img
             src={doctor.profileImage}
             alt={doctor.name}
-            className="w-24 h-24 rounded-full object-cover border-4 border-healthcare-primary/20 group-hover:border-healthcare-primary/40 transition-colors"
+            className="w-24 h-24 rounded-full object-cover border-4 border-healthcare-primary/20 group-hover:border-healthcare-primary/40 transition-all duration-300 group-hover:scale-105"
           />
           <div className="absolute -bottom-2 -right-2">
             <Badge variant={getAvailabilityVariant(doctor.availability)}>
@@ -46,7 +54,9 @@ export const DoctorCard = ({ doctor }: DoctorCardProps) => {
         </div>
         
         <div className="space-y-2">
-          <CardTitle className="text-xl text-healthcare-text">{doctor.name}</CardTitle>
+          <CardTitle className="text-xl text-healthcare-text group-hover:text-healthcare-primary transition-colors">
+            {doctor.name}
+          </CardTitle>
           <p className="text-healthcare-secondary font-medium">{doctor.specialization}</p>
           
           {doctor.rating && (
@@ -65,14 +75,24 @@ export const DoctorCard = ({ doctor }: DoctorCardProps) => {
           </p>
         </div>
 
-        <Button 
-          onClick={handleViewProfile}
-          variant="healthcare" 
-          className="w-full"
-          disabled={doctor.availability === "On Leave"}
-        >
-          View Profile
-        </Button>
+        <div className="flex gap-2">
+          <Button 
+            onClick={handleViewProfile}
+            variant="outline" 
+            className="flex-1"
+            disabled={doctor.availability === "On Leave"}
+          >
+            View Profile
+          </Button>
+          <Button 
+            onClick={handleQuickBook}
+            variant="healthcare" 
+            className="flex-1"
+            disabled={doctor.availability === "On Leave" || doctor.availability === "Fully Booked"}
+          >
+            Quick Book
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

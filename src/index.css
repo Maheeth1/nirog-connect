@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 200 100% 40%;
+    --primary: 261 64% 65%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 185 10% 95%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 185 10% 95%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 165 85% 45%;
+    --accent: 234 89% 74%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -42,15 +42,15 @@ All colors MUST be HSL.
     --warning: 45 93% 58%;
     --warning-foreground: 215 25% 27%;
 
-    --healthcare-primary: 200 100% 40%;
-    --healthcare-secondary: 165 85% 45%;
-    --healthcare-bg: 210 20% 98%;
+    --healthcare-primary: 261 64% 65%;
+    --healthcare-secondary: 234 89% 74%;
+    --healthcare-bg: 252 100% 98%;
     --healthcare-card: 0 0% 100%;
-    --healthcare-text: 215 25% 27%;
-    --healthcare-muted: 215 16% 47%;
+    --healthcare-text: 234 25% 27%;
+    --healthcare-muted: 234 16% 47%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(200 100% 40%), hsl(165 85% 45%));
-    --gradient-subtle: linear-gradient(135deg, hsl(210 20% 98%), hsl(185 10% 95%));
+    --gradient-primary: linear-gradient(135deg, hsl(261 64% 65%), hsl(234 89% 74%));
+    --gradient-subtle: linear-gradient(135deg, hsl(252 100% 98%), hsl(247 32% 95%));
 
     --shadow-soft: 0 4px 20px -2px hsl(200 100% 40% / 0.1);
     --shadow-card: 0 4px 12px -2px hsl(215 25% 27% / 0.1);

@@ -3,6 +3,7 @@ import { doctors } from "@/data/doctors";
 import { DoctorCard } from "@/components/DoctorCard";
 import { SearchBar } from "@/components/SearchBar";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -67,6 +68,7 @@ export const Home = () => {
           )}
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

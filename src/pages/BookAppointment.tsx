@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { findDoctorById } from "@/data/doctors";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ModernDateTimePicker } from "@/components/ModernDateTimePicker";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import { Calendar, Clock, User, Mail } from "lucide-react";
+import { Calendar, User, Mail } from "lucide-react";
 
 interface FormData {
   patientName: string;
@@ -26,7 +28,7 @@ export const BookAppointment = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   
-  const doctor = findDoctorById(Number(id));
+  const doctor = findDoctorById(id!);
   
   const [formData, setFormData] = useState<FormData>({
     patientName: "",
@@ -208,22 +210,14 @@ export const BookAppointment = () => {
                 {/* Date and Time */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-healthcare-text flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
+                    <Calendar className="w-4 h-4" />
                     Preferred Date & Time
                   </label>
-                  <Input
-                    type="datetime-local"
+                  <ModernDateTimePicker
                     value={formData.datetime}
-                    onChange={(e) => handleInputChange("datetime", e.target.value)}
-                    min={getMinDateTime()}
-                    className={errors.datetime ? "border-destructive" : ""}
+                    onChange={(value) => handleInputChange("datetime", value)}
+                    error={errors.datetime}
                   />
-                  {errors.datetime && (
-                    <p className="text-sm text-destructive">{errors.datetime}</p>
-                  )}
-                  <p className="text-xs text-healthcare-muted">
-                    Please select a date and time at least 1 hour from now
-                  </p>
                 </div>
 
                 {/* Submit Button */}
@@ -243,6 +237,7 @@ export const BookAppointment = () => {
           </Card>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

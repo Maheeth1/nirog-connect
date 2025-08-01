@@ -6,7 +6,7 @@ import aishaImage from "@/assets/aisha.jpg";
 import karanImage from "@/assets/karan.jpg";
 
 export interface Doctor {
-  id: number;
+  id: string;
   name: string;
   specialization: string;
   profileImage: string;
@@ -20,7 +20,7 @@ export interface Doctor {
 
 export const doctors: Doctor[] = [
   {
-    id: 1,
+    id: "riya-sharma",
     name: "Dr. Riya Sharma",
     specialization: "Cardiologist",
     profileImage: riyaImage,
@@ -32,7 +32,7 @@ export const doctors: Doctor[] = [
     rating: 4.8
   },
   {
-    id: 2,
+    id: "arjun-mehta",
     name: "Dr. Arjun Mehta",
     specialization: "Dermatologist",
     profileImage: arjunImage,
@@ -44,7 +44,7 @@ export const doctors: Doctor[] = [
     rating: 4.9
   },
   {
-    id: 3,
+    id: "sneha-kapoor",
     name: "Dr. Sneha Kapoor",
     specialization: "Pediatrician",
     profileImage: snehaImage,
@@ -56,7 +56,7 @@ export const doctors: Doctor[] = [
     rating: 4.7
   },
   {
-    id: 4,
+    id: "rakesh-verma",
     name: "Dr. Rakesh Verma",
     specialization: "Orthopedic",
     profileImage: rakeshImage,
@@ -68,7 +68,7 @@ export const doctors: Doctor[] = [
     rating: 4.6
   },
   {
-    id: 5,
+    id: "aisha-khan",
     name: "Dr. Aisha Khan",
     specialization: "Neurologist",
     profileImage: aishaImage,
@@ -80,7 +80,7 @@ export const doctors: Doctor[] = [
     rating: 4.8
   },
   {
-    id: 6,
+    id: "karan-patel",
     name: "Dr. Karan Patel",
     specialization: "ENT Specialist",
     profileImage: karanImage,
@@ -93,6 +93,6 @@ export const doctors: Doctor[] = [
   }
 ];
 
-export const findDoctorById = (id: number): Doctor | undefined => {
+export const findDoctorById = (id: string): Doctor | undefined => {
   return doctors.find(doctor => doctor.id === id);
 };

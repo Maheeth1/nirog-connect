@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Heart } from "lucide-react";
+import { ArrowLeft, Heart, Home, User, Calendar } from "lucide-react";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <header className="bg-gradient-to-r from-healthcare-primary to-healthcare-secondary text-white shadow-lg">
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {!isHomePage && (
@@ -29,9 +29,23 @@ export const Header = () => {
             </div>
           </div>
           
-          <p className="text-white/90 text-sm">
-            Your trusted healthcare companion
-          </p>
+          <div className="flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => navigate("/")}
+                className="text-white hover:bg-white/20 flex items-center gap-2"
+              >
+                <Home className="w-4 h-4" />
+                Home
+              </Button>
+            </nav>
+            
+            <p className="text-white/90 text-sm hidden lg:block">
+              Your trusted healthcare companion
+            </p>
+          </div>
         </div>
       </div>
     </header>

@@ -1,16 +1,17 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { findDoctorById } from "@/data/doctors";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Star, GraduationCap, Clock, MapPin } from "lucide-react";
+import { Calendar, Star, GraduationCap, Clock } from "lucide-react";
 
 export const DoctorProfile = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   
-  const doctor = findDoctorById(Number(id));
+  const doctor = findDoctorById(id!);
 
   if (!doctor) {
     return (
@@ -159,6 +160,7 @@ export const DoctorProfile = () => {
           </Card>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
