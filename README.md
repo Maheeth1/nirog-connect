@@ -35,20 +35,6 @@ This application simulates a real-world healthcare booking system with the follo
 
 ---
 
-## 📁 Folder Structure
-
-niroggyan-app/
-├── public/ # Static files
-├── src/
-│ ├── assets/ # Images & static media
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # LandingPage, DoctorProfile, BookingPage
-│ ├── data/ # Mock JSON data for doctors
-│ ├── App.tsx # Main app routes
-│ └── main.tsx # Entry point
-
-
----
 
 ## 🧪 Features
 
@@ -97,14 +83,14 @@ niroggyan-app/
   npm run dev
   ```
 
-### 🎯 Future Improvements (Given More Time)
+## 🎯 Future Improvements (Given More Time)
 - ✅ Add calendar-based time slot picker
 - 🧑‍⚕️ Doctor dashboard to manage schedules
 - 📩 Email confirmation for appointments
 - 📦 Integrate a real backend (Express + MongoDB)
 - 🌍 Localization for multiple languages
 
-### 🧠 Challenges Faced & Solutions
+## 🧠 Challenges Faced & Solutions
 | Challenge                             | Solution                                               |
 | ------------------------------------- | ------------------------------------------------------ |
 | Structuring routing with React Router | Used `react-router-dom@6` with dynamic paths           |
