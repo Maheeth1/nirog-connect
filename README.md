@@ -19,8 +19,7 @@ This application simulates a real-world healthcare booking system with the follo
 
 ## 🚀 Live Demo
 
-> _Coming soon..._  
-(You can deploy it on [Vercel](https://vercel.com) or [Netlify](https://netlify.com) easily.)
+> 👉 [https://niroggyanconnect.vercel.app/](https://niroggyanconnect.vercel.app/)
 
 ---
 
